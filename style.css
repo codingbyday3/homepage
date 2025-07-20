@@ -1,4 +1,7 @@
 :root{
+  /* colors */
+  --clr-white:rgb(227, 225, 225);
+  --clr-blue:rgb(0, 183, 255);
   /* font-familys */
   --ff-playfair-display:"Playfair Display", serif;
   --ff-roboto:"Roboto", sans-serif;
@@ -18,7 +21,8 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  padding: 2rem;
+
+  font-family: var(--ff-roboto);
 }
 img, picture, video, canvas, svg {
   display: block;
@@ -32,11 +36,43 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 p {
   text-wrap: pretty;
+
 }
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
+  font-family: var(--ff-playfair-display);
 
 }
 #root, #__next {
   isolation: isolate;
+}
+
+main,
+header{
+  padding: 2rem;
+}
+
+header{
+  position: relative;
+}
+
+header::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--clr-blue);
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 80%);
+  z-index:-1;
+}
+header img{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.653);
+  min-width: 220px;
+}
+
+header h1{
+  position: absolute;
+  left: 40px;
+  bottom: 30px;
+  color: white;
+
 }
