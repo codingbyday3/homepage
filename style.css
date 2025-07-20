@@ -88,3 +88,8 @@ main{
 svg{
   width: 20px;
 }
+
+.links-container{
+  display: flex;
+  gap: 1rem;
+}
