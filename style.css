@@ -1,7 +1,7 @@
 :root{
   /* colors */
   --clr-white:rgb(227, 225, 225);
-  --clr-blue:rgb(0, 183, 255);
+  --clr-blue:rgb(176, 229, 246);
   /* font-familys */
   --ff-playfair-display:"Playfair Display", serif;
   --ff-roboto:"Roboto", sans-serif;
@@ -58,7 +58,7 @@ header::before{
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--clr-blue);
+  background: linear-gradient(to bottom,var(--clr-blue), var(--clr-white));
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 80%);
   z-index:-1;
 }
@@ -78,6 +78,10 @@ header h1{
 main{
   padding: 0 2rem;
 }
+
+section{
+  margin-bottom:1rem;
+}
 .about-me{
   display: flex;
   flex-direction: column;
@@ -92,4 +96,23 @@ svg{
 .links-container{
   display: flex;
   gap: 1rem;
+}
+
+.my-work {
+  text-align: center
+}
+.projects-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px, 1fr) );
+  gap: 2rem;
+}
+
+.projects-container a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.project{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.466);
+  border-radius: 10px;
 }
