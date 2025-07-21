@@ -116,3 +116,25 @@ svg{
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.466);
   border-radius: 10px;
 }
+
+
+.project img{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.project-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.project-links{
+  display: flex;
+  gap: 10px;
+}
+
+.project p{
+  padding: 1rem;
+}
